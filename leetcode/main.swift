@@ -369,6 +369,26 @@ class Solution {
 //        var count = 0
 //        return count
 //    }
+    //paused
+//    func findAnagrams(_ s: String, _ p: String) -> [Int] {
+//    var i = 0
+//        var j = p.count
+//        var arr:[Int] = []
+//    
+//        while i < j && j <= s.count {
+//            let startIndex = s.index(s.startIndex, offsetBy: i )
+//            let endIndex = s.index(s.startIndex, offsetBy: j )
+//            let mySubstring  = s[startIndex..<endIndex]
+//            print(mySubstring)
+//            if(isAnagram(String(mySubstring), p)){
+//                arr.append(i)
+//            }
+//            i += 1
+//            j = i + p.count
+//        }
+//        
+//        return arr
+//    }
     
 
     
