@@ -326,75 +326,57 @@ class Solution {
     
     //paused
     
-//    func divide(_ dividend: Int, _ divisor: Int) -> Int {
-//        var dividend = dividend
-//        var res = 0
-//        if(dividend < Int.min || dividend > Int.max){
-//            return 0
-//        }
-//        while dividend > divisor {
-//            dividend -= divisor
-//            res += 1
-//        }
-//        
-//        print(res)
-//        return res
+    //    func divide(_ dividend: Int, _ divisor: Int) -> Int {
+    //        var dividend = dividend
+    //        var res = 0
+    //        if(dividend < Int.min || dividend > Int.max){
+    //            return 0
+    //        }
+    //        while dividend > divisor {
+    //            dividend -= divisor
+    //            res += 1
+    //        }
+    //
+    //        print(res)
+    //        return res
+    //    }
+    //    func myPow(_ x: Double, _ n: Int) -> Double {
+    //        var n = n
+    //        var res: Double = x
+    //        while n != 1 {
+    //            if(n > 0){
+    //                res = res * x
+    //                print(res)
+    //                n -= 1
+    //            }else{
+    //                res = res / x
+    //                print(res)
+    //                n += 1
+    //            }
+    //        }
+    //        return res
+    //    }
+    //paused
+    //    func productExceptSelf(_ nums: [Int]) -> [Int] {
+    //        var i = 0
+    //        var j = 0
+    //        var arr: [Int] = []
+    //        return arr
+    //    }
+    
+    
+//    func hIndex(_ citations: [Int]) -> Int {
+//        var count = 0
+//        return count
 //    }
-//    func myPow(_ x: Double, _ n: Int) -> Double {
-//        var n = n
-//        var res: Double = x
-//        while n != 1 {
-//            if(n > 0){
-//                res = res * x
-//                print(res)
-//                n -= 1
-//            }else{
-//                res = res / x
-//                print(res)
-//                n += 1
-//            }
-//        }
-//        return res
-//    }
-//paused
-//    func productExceptSelf(_ nums: [Int]) -> [Int] {
-//        var i = 0
-//        var j = 0
-//        var arr: [Int] = []
-//        return arr
-//    }
+    
 
-   
-    func hIndex(_ citations: [Int]) -> Int {
-       var count = 0
-        return count
-    }
-    func isAnagram(_ s: String, _ t: String) -> Bool {
-        var dict1: [String:Int] = [:]
-        var dict2: [String:Int] = [:]
-        
-        for v1 in s.map({String($0)}) {
-            if(dict1.keys.contains(v1)){
-                dict1[v1]! += 1
-            }else {
-                dict1[v1] = 1
-            }
-        }
-        for v2 in t.map({String($0)}){
-            if(dict2.keys.contains(v2)){
-                dict2[v2]! += 1
-            }else {
-                dict2[v2] = 1
-            }
-        }
-        return dict1 == dict2 ? true : false
-    }
+    
 }
+
 var sol = Solution()
-print(sol.isAnagram("anagram","nagaram"))
 
 
-//Input: numbers = [2,7,11,15], target = 9
 
 
 
