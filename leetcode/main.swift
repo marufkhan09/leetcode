@@ -365,45 +365,45 @@ class Solution {
     //    }
     
     
-//    func hIndex(_ citations: [Int]) -> Int {
-//        var count = 0
-//        return count
-//    }
+    //    func hIndex(_ citations: [Int]) -> Int {
+    //        var count = 0
+    //        return count
+    //    }
     //paused
-//    func findAnagrams(_ s: String, _ p: String) -> [Int] {
-//    var i = 0
-//        var j = p.count
-//        var arr:[Int] = []
-//    
-//        while i < j && j <= s.count {
-//            let startIndex = s.index(s.startIndex, offsetBy: i )
-//            let endIndex = s.index(s.startIndex, offsetBy: j )
-//            let mySubstring  = s[startIndex..<endIndex]
-//            print(mySubstring)
-//            if(isAnagram(String(mySubstring), p)){
-//                arr.append(i)
-//            }
-//            i += 1
-//            j = i + p.count
-//        }
-//        
-//        return arr
-//    }
+    //    func findAnagrams(_ s: String, _ p: String) -> [Int] {
+    //    var i = 0
+    //        var j = p.count
+    //        var arr:[Int] = []
+    //
+    //        while i < j && j <= s.count {
+    //            let startIndex = s.index(s.startIndex, offsetBy: i )
+    //            let endIndex = s.index(s.startIndex, offsetBy: j )
+    //            let mySubstring  = s[startIndex..<endIndex]
+    //            print(mySubstring)
+    //            if(isAnagram(String(mySubstring), p)){
+    //                arr.append(i)
+    //            }
+    //            i += 1
+    //            j = i + p.count
+    //        }
+    //
+    //        return arr
+    //    }
     
-//    func arithmeticTriplets(_ nums: [Int], _ diff: Int) -> Int {
-//     
-//        
-//        
-//     
-//        return res
-//    }
-    
-    
-
+    //    func arithmeticTriplets(_ nums: [Int], _ diff: Int) -> Int {
+    //
+    //
+    //
+    //
+    //        return res
+    //    }
+  
+   
     
 }
 
 var sol = Solution()
+print(sol.findMinFibonacciNumbers(513314))
 
 
 
