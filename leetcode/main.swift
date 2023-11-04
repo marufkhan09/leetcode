@@ -390,6 +390,15 @@ class Solution {
 //        return arr
 //    }
     
+//    func arithmeticTriplets(_ nums: [Int], _ diff: Int) -> Int {
+//     
+//        
+//        
+//     
+//        return res
+//    }
+    
+    
 
     
 }
