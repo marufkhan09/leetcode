@@ -397,14 +397,11 @@ class Solution {
     //
     //        return res
     //    }
-  
-   
     
+   
 }
 
 var sol = Solution()
-print(sol.findMinFibonacciNumbers(513314))
-
 
 
 
