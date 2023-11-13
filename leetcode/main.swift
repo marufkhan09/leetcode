@@ -398,7 +398,69 @@ class Solution {
     //        return res
     //    }
     
-   
+    //    func maxArea(_ height: [Int]) -> Int {
+    //        var i = 0
+    //        var j = height.count - 1
+    //        var temp : [Int] = []
+    //        var temp2 : [Int] = []
+    //
+    //        while i < j {
+    //            if(height[i] > height[j]){
+    //                temp.append(height[j] * height[j])
+    //                temp2.append(height[j] * height[j] * (j - i))
+    //                j -= 1
+    //            }else {
+    //                temp.append(height[i] * height[i])
+    //                temp2.append(height[i] * height[i] * (j - i))
+    //                i += 1
+    //            }
+    //
+    //        }
+    //        return temp[temp2.firstIndex(of:  temp2.max()!)!]
+    //    }
+    
+    
+    func deleteGreatestValue(_ grid: [[Int]]) -> Int {
+        var mat = grid
+        var sum = 0
+        var temp:[[Int]] = []
+        for i in 0..<mat.count {
+            mat[i].sort(by: >)
+        }
+        for i in grid {
+            temp.append(i.sorted(by: >))
+        }
+        for i in 0..<temp[0].count {
+            var arr = [Int]()
+            for j in 0..<temp.count {
+                arr.append(temp[j][i])
+            }
+            sum += arr.max()!
+            
+        }
+        return sum
+    }
+    
+    
+    func transpose(_ matrix: [[Int]]) -> [[Int]] {
+        var temp:[[Int]] = []
+        for i in 0..<matrix[0].count{
+            var arr = [Int]()
+            for j in 0..<matrix[i].count {
+                print(matrix[j][i])
+                arr.append(matrix[j][i])
+            }
+            temp.append(arr)
+        }
+        return temp
+    }
+    
+    
+    
+
+    
+    
+    
 }
 
 var sol = Solution()
