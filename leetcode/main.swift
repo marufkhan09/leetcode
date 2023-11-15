@@ -456,14 +456,27 @@ class Solution {
     }
     
     
+    var arr:[Character] =  ["a","a","b","b","c","c","c"]
     
-
+    
+    //    func compress(_ chars: inout [Character]) -> Int {
+    //        var i = 0
+    //        var j = 0
+    //        var temp : [Character]
+    //        while j < chars.count {
+    //            if(i == j){
+    //
+    //            }
+    //        }
+    //        return chars.count
+    //    }
     
     
     
 }
 
 var sol = Solution()
+
 
 
 
