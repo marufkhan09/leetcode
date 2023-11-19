@@ -473,9 +473,103 @@ class Solution {
     
     
     
+    
+    
+    func canPlaceFlowers(_ flowerbed: [Int], _ n: Int) -> Bool {
+        var k = 0
+        var i = 0
+        var j = 1
+        var count = 0
+        var flowerbed = flowerbed
+        
+        //        if(flowerbed.count == 0){
+        //            return false
+        //        }else if(flowerbed.count == 1){
+        //            if(flowerbed[0] == 1){
+        //
+        //            }
+        //        }
+        
+        while j < flowerbed.count {
+            if(flowerbed[k] == 0 && flowerbed[i] == 0 && flowerbed[j] == 0){
+                if(i==0){
+                    //[1,0,0,0,0,0]
+                    flowerbed[k] = 1
+                    count += 1
+                    k = i
+                    i = j
+                    j += 1
+                    
+                }else {
+                    k = i
+                    i = j
+                    j += 1
+                }
+            }else if(flowerbed[k] == 0 && flowerbed[i] == 0 && flowerbed[j] == 1){
+                //[1,0,1,0,0,0]
+                flowerbed[k] = 1
+                count += 1
+                k = j
+                i = j + 1
+                j += 2
+                
+            }else if(flowerbed[k] == 0 && flowerbed[i] == 1 && flowerbed[j] == 0){
+                
+                //[1,0,0,0,0,0]
+            }else if(flowerbed[k] == 0 && flowerbed[i] == 1  && flowerbed[j] == 1){
+                //[1,0,0,0,0,0]
+            }else if(flowerbed[k] == 1 && flowerbed[i] == 0  && flowerbed[j] == 0) {
+                //[1,0,1,0,1,0]
+                flowerbed[j] = 1
+                count += 1
+                k = j
+                i = j + 1
+                j += 2
+            }
+            else if(flowerbed[k] == 1 && flowerbed[i] == 0  && flowerbed[j] == 1) {
+                //[1,0,0,0,0,0]
+            }
+            else if(flowerbed[k] == 1 && flowerbed[i] == 1  && flowerbed[j] == 0) {
+                //[0,0,0,0,0,0]
+            }
+            else {
+                //[0,0,0,0,0,0]
+            }
+            
+        }
+        
+        if(count >= n){
+            return true
+        }else {
+            return false
+        }
+    }
+    
+    func findMaxAverage(_ nums: [Int], _ k: Int) -> Double {
+        var sum = 0
+        var maxAvg = Double(Int.min)
+        var i = 0
+        
+        for j in 0..<nums.count {
+            sum += nums[j]
+            if j >= k - 1 {
+                print("for \(j) Sum::\(sum)")
+                let average = Double(sum) / Double(k)
+                print("avg::\(average)")
+                maxAvg = max(maxAvg, average)
+                sum  -= nums[i]
+                i += 1
+            }
+        }
+        
+        return maxAvg
+    }
+    
 }
 
+
 var sol = Solution()
+print(sol.findMaxAverage([1,12,-5,-6,50,3], 4))
 
 
 
