@@ -553,11 +553,11 @@ class Solution {
         for j in 0..<nums.count {
             sum += nums[j]
             if j >= k - 1 {
-                print("for \(j) Sum::\(sum)")
+                print("for \(j+1) Sum before::\(sum)")
                 let average = Double(sum) / Double(k)
-                print("avg::\(average)")
                 maxAvg = max(maxAvg, average)
                 sum  -= nums[i]
+                print("for \(j+1) Sum after::\(sum)")
                 i += 1
             }
         }
@@ -565,11 +565,34 @@ class Solution {
         return maxAvg
     }
     
+    func maximumSubarraySum(_ nums: [Int], _ k: Int) -> Int {
+        var maxSum = 0
+        var i = 0
+        var sum = 0
+        var j = 0
+        while j < nums.count  {
+            let subArray = Array(nums[0..<j])
+            if(!subArray.contains(nums[j])){
+                sum += nums[j]
+                if j >= k - 1  {
+                    print("for \(j+1) Sum before::\(sum)")
+                    maxSum = max(maxSum, sum)
+                    sum  -= nums[i]
+                    print("for \(j+1) Sum after::\(sum)")
+                    i += 1
+                }
+            }
+            
+            j += 1
+        }
+        return maxSum
+    }
+    
 }
 
 
 var sol = Solution()
-print(sol.findMaxAverage([1,12,-5,-6,50,3], 4))
+print(sol.maximumSubarraySum([1,5,4,2,9,9,9], 3))
 
 
 
