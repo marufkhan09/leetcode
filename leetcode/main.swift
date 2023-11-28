@@ -66,41 +66,7 @@
 
 ////////////no two problem paused
 //class Solution {
-//    func increasingTriplet(_ nums: [Int]) -> Bool {
-//        var i = 0
-//        var j = 1
-//        var k = 2
-//        var res = false
-//        if(nums.count < 3){
-//            return false
-//        }
-//        else {
-//
-//            //[20,100,10,12,5,13]
-//            while i < j  && j < k && k < nums.count{
-//                if(nums[i] < nums[j] && nums[j] < nums[k]){
-//                    res = true
-//
-//                }else if(nums[i] < nums[j] && nums[j] > nums[k]){
-//                    res = false
-//                    k += 1
-//
-//                }else if(nums[i] < nums[j] && nums[j] > nums[k]){
-//                    res = false
-//                    j += 1
-//                    k += 1
-//
-//                }else if(nums[i] > nums[j]){
-//                    res = false
-//                    i += 1
-//                    j += 1
-//                    k += 1
-//                }
-//
-//            }
-//            return k >= 3 ? true : false
-//        }
-//    }
+
 //}
 //
 //var sol = Solution()
@@ -471,80 +437,6 @@ class Solution {
     //        return chars.count
     //    }
     
-    
-    
-    
-    
-    func canPlaceFlowers(_ flowerbed: [Int], _ n: Int) -> Bool {
-        var k = 0
-        var i = 0
-        var j = 1
-        var count = 0
-        var flowerbed = flowerbed
-        
-        //        if(flowerbed.count == 0){
-        //            return false
-        //        }else if(flowerbed.count == 1){
-        //            if(flowerbed[0] == 1){
-        //
-        //            }
-        //        }
-        
-        while j < flowerbed.count {
-            if(flowerbed[k] == 0 && flowerbed[i] == 0 && flowerbed[j] == 0){
-                if(i==0){
-                    //[1,0,0,0,0,0]
-                    flowerbed[k] = 1
-                    count += 1
-                    k = i
-                    i = j
-                    j += 1
-                    
-                }else {
-                    k = i
-                    i = j
-                    j += 1
-                }
-            }else if(flowerbed[k] == 0 && flowerbed[i] == 0 && flowerbed[j] == 1){
-                //[1,0,1,0,0,0]
-                flowerbed[k] = 1
-                count += 1
-                k = j
-                i = j + 1
-                j += 2
-                
-            }else if(flowerbed[k] == 0 && flowerbed[i] == 1 && flowerbed[j] == 0){
-                
-                //[1,0,0,0,0,0]
-            }else if(flowerbed[k] == 0 && flowerbed[i] == 1  && flowerbed[j] == 1){
-                //[1,0,0,0,0,0]
-            }else if(flowerbed[k] == 1 && flowerbed[i] == 0  && flowerbed[j] == 0) {
-                //[1,0,1,0,1,0]
-                flowerbed[j] = 1
-                count += 1
-                k = j
-                i = j + 1
-                j += 2
-            }
-            else if(flowerbed[k] == 1 && flowerbed[i] == 0  && flowerbed[j] == 1) {
-                //[1,0,0,0,0,0]
-            }
-            else if(flowerbed[k] == 1 && flowerbed[i] == 1  && flowerbed[j] == 0) {
-                //[0,0,0,0,0,0]
-            }
-            else {
-                //[0,0,0,0,0,0]
-            }
-            
-        }
-        
-        if(count >= n){
-            return true
-        }else {
-            return false
-        }
-    }
-    
     func findMaxAverage(_ nums: [Int], _ k: Int) -> Double {
         var sum = 0
         var maxAvg = Double(Int.min)
@@ -588,11 +480,44 @@ class Solution {
         return maxSum
     }
     
+    //    func increasingTriplet(_ nums: [Int]) -> Bool {
+    //        var i = 0
+    //        var j = 1
+    //        var k = 2
+    //        var res = false
+    //        if(nums.count < 3)
+    //        {
+    //            return false
+    //        }
+    //        else {
+    //            while i < j  && j < k && k < nums.count{
+    //                if(nums[i] < nums[j] && nums[j] < nums[k]){
+    //                    res = true
+    //                }else if(nums[i] < nums[j] && nums[j] > nums[k]){
+    //                    res = false
+    //                    k += 1
+    //
+    //                }else if(nums[i] < nums[j] && nums[j] > nums[k]){
+    //                    res = false
+    //                    j += 1
+    //                    k += 1
+    //
+    //                }else if(nums[i] > nums[j]){
+    //                    res = false
+    //                    i += 1
+    //                    j += 1
+    //                    k += 1
+    //                }
+    //
+    //            }
+    //            //  return k >= 3 ? true : false
+    //            return res
+    //        }
+    //    }
+
 }
 
-
 var sol = Solution()
-print(sol.maximumSubarraySum([1,5,4,2,9,9,9], 3))
 
 
 
