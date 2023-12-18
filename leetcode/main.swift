@@ -8,61 +8,7 @@
 //import Foundation
 //
 ////////////no one  problem paused
-//class Solution {
-//    var arr: [Character] = ["a","b","b","b","b","b","b","b","b","b","b","b","b"]
-//
-//    func compress(_ chars: inout [Character]) -> Int {
-//        var str = ""
-//        var i = 0
-//        var j = 1
-//
-//        var tempArr : [String] = []
-//
-//        while i < chars.count  && j <= chars.count {
-//
-//            if(i == 0){
-//                tempArr.append(String(chars[i]))
-//              //  print("array jokhon empty::\(tempArr)")
-//                print("i jokhon :\(i)::tokhon j:\(j) ")
-//                i += 1
-//            }else if(chars[i-1] == chars[i]){
-//             //   print("array jokhon empty na but shoman::\(tempArr)")
-//                j += 1
-//                print("i jokhon :\(i)::tokhon j:\(j) ")
-//                i += 1
-//                if(i == chars.count && j != 1){
-//                    tempArr.append(String(j))
-//                }
-//
-//            }
-//            else if(chars[i-1] != chars[i]){
-//                tempArr.append(String(j))
-//                tempArr.append(String(chars[i]))
-//                j = 1
-//                print("i jokhon :\(i)::tokhon j:\(j) ")
-//                i += 1
-//
-//            }
-//
-//        }
-//        print("final::\(tempArr)")
-//        chars = []
-//        print(tempArr.joined(separator: ""))
-//
-//
-//        return tempArr.count
-//    }
-//
-//}
-//
-//var sol = Solution()
-//print(sol.compress(&sol.arr))
-//
-//
-//
-//
-//
-//
+
 
 ////////////no two problem paused
 //class Solution {
@@ -78,31 +24,31 @@
 import Foundation
 
 class Solution {
-    //    func decodeString(_ s: String) -> String {
-    //
-    //        var i = 0
-    //        var j = 1
-    //        var res = ""
-    //        let chArr = Array(s)
-    //        //"3[a]2[bc]"
-    //        print(chArr)
-    //        while i < chArr.count {
-    //            var num = ""
-    //            var letter  = ""
-    //
-    //            while j < chArr.count {
-    //                if(chArr[i].isNumber){
-    //                    num += String(chArr[i])
-    //                }
-    //            }
-    //
-    //
-    //
-    //
-    //        }
-    //
-    //        return ""
-    //    }
+        func decodeString(_ s: String) -> String {
+    
+            var i = 0
+            var j = 1
+            var res = ""
+            let chArr = Array(s)
+            //"3[a]2[bc]"
+            print(chArr)
+            while i < chArr.count {
+                var num = ""
+                var letter  = ""
+    
+                while j < chArr.count {
+                    if(chArr[i].isNumber){
+                        num += String(chArr[i])
+                    }
+                }
+    
+    
+    
+    
+            }
+    
+            return ""
+        }
     
     //    func decodeMessage(_ key: String, _ message: String) -> String {
     //        var dict:[String:String] = [:]
@@ -139,26 +85,7 @@ class Solution {
     //    }
     //another
     
-    //    func reverse(_ x: Int) -> Int {
-    //        var temp = ""
-    //        var s = String(x).map({String($0)})
-    //        if(x <= 0){
-    //            s.removeFirst()
-    //            temp += "-"
-    //            var i = s.count - 1
-    //            while i >= 0{
-    //                temp  += s[i]
-    //                i -= 1
-    //            }
-    //        }else{
-    //            var i = s.count - 1
-    //            while i >= 0{
-    //                temp  += s[i]
-    //                i -= 1
-    //            }
-    //        }
-    //        return Int(temp)!
-    //    }
+
     
     //    func pivotIndex(_ nums: [Int]) -> Int {
     //        var add = 0
@@ -175,9 +102,6 @@ class Solution {
     
     //    private let values = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
     //    private let symbols = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"]
-    
-    private let values = [1000,500,100,50,10,5,1]
-    private let symbols = ["M","D","C","L","X","V","I"]
     
     //    func intToRoman(_ num: Int) -> String {
     //        var curNum = num
@@ -408,34 +332,18 @@ class Solution {
     }
     
     
-    func transpose(_ matrix: [[Int]]) -> [[Int]] {
-        var temp:[[Int]] = []
-        for i in 0..<matrix[0].count{
-            var arr = [Int]()
-            for j in 0..<matrix[i].count {
-                print(matrix[j][i])
-                arr.append(matrix[j][i])
-            }
-            temp.append(arr)
-        }
-        return temp
-    }
-    
-    
-    var arr:[Character] =  ["a","a","b","b","c","c","c"]
-    
-    
-    //    func compress(_ chars: inout [Character]) -> Int {
-    //        var i = 0
-    //        var j = 0
-    //        var temp : [Character]
-    //        while j < chars.count {
-    //            if(i == j){
-    //
-    //            }
-    //        }
-    //        return chars.count
-    //    }
+//    func transpose(_ matrix: [[Int]]) -> [[Int]] {
+//        var temp:[[Int]] = []
+//        for i in 0..<matrix[0].count{
+//            var arr = [Int]()
+//            for j in 0..<matrix[i].count {
+//                print(matrix[j][i])
+//                arr.append(matrix[j][i])
+//            }
+//            temp.append(arr)
+//        }
+//        return temp
+//    }
     
     func findMaxAverage(_ nums: [Int], _ k: Int) -> Double {
         var sum = 0
@@ -480,41 +388,182 @@ class Solution {
         return maxSum
     }
     
-    //    func increasingTriplet(_ nums: [Int]) -> Bool {
-    //        var i = 0
-    //        var j = 1
-    //        var k = 2
-    //        var res = false
-    //        if(nums.count < 3)
-    //        {
-    //            return false
-    //        }
-    //        else {
-    //            while i < j  && j < k && k < nums.count{
-    //                if(nums[i] < nums[j] && nums[j] < nums[k]){
-    //                    res = true
-    //                }else if(nums[i] < nums[j] && nums[j] > nums[k]){
-    //                    res = false
-    //                    k += 1
-    //
-    //                }else if(nums[i] < nums[j] && nums[j] > nums[k]){
-    //                    res = false
-    //                    j += 1
-    //                    k += 1
-    //
-    //                }else if(nums[i] > nums[j]){
-    //                    res = false
-    //                    i += 1
-    //                    j += 1
-    //                    k += 1
-    //                }
-    //
-    //            }
-    //            //  return k >= 3 ? true : false
-    //            return res
-    //        }
-    //    }
+  
+    
+    func majorityElement(_ nums: [Int]) -> Int {
+        
+        var dict = [Int:Int]()
+        
+        nums.forEach { item in
+            dict[item,default: 0] += 1
+        }
+        let sortedTuples = dict.sorted { $0.value > $1.value }
+        let sortedDict = Dictionary(uniqueKeysWithValues: sortedTuples)
+        
+        return sortedDict.first!.key
+    }
+    
+    //paused...
+    func maxOperations(_ nums: [Int], _ k: Int) -> Int {
+        var count = 0
+        var i = 0
+        var j = nums.count - 1
+        while i < j {
+            if(nums[i] + nums[j] == k){
+                count += 1
+                j -= 1
+                i += 1
+            }
+            else if( nums[i] + nums[j] > k && nums[i] > nums[j]) {
+                i += 1
+            }
+            else if( nums[i] + nums[j] > k && nums[i] < nums[j]) {
+                j -= 1
+            }
+            else if( nums[i] + nums[j] < k && nums[i] < nums[j]) {
+                i += 1
+            }else if( nums[i] + nums[j] < k && nums[i] > nums[j]) {
+                j -= 1
+            }
+            else {
+                i += 1
+                j -= 1
+            }
+        }
+        return count
+    }
+    
+    func longestOnes(_ nums: [Int], _ k: Int) -> Int {
+        var i = 0
+        var j = 0
+        var nums = nums
+        var temp = k
+        var len = 0
+        //[1,1,1,0,0,0,1,1,1,1,0]
+        
+        while j < nums.count {
+            if(nums[i] == 1 && nums[j] == 1){
+                j += 1
+            }else {
+                
+                if(nums[j] == 0 && temp != 0){
+                    nums[j] = 1
+                    temp -= 1
+                    i = j
+                    j += 1
+                    len = j
+                    
+                }else if(nums[j] == 0 && temp == 0) {
+                    temp = k
+                    
+                }
+                else {
+                    break
+                }
+            }
+        }
+        
+        return len
+    }
+    
+    
+    func transpose(_ matrix: [[Int]]) -> [[Int]] {
+        var temp : [[Int]] = []
+        
+        for i in 0..<matrix[0].count {
+            var arr : [Int] = []
+            for j in 0..<matrix[i].count {
+                arr.append(matrix[j][i])
+            }
+            temp.append(arr)
+        }
+        return temp
+    }
+    
+        func maxOperations(_ x: Int) -> Int {
+            var temp = ""
+            var s = String(x).map({String($0)})
+            if(x <= 0){
+                s.removeFirst()
+                temp += "-"
+                var i = s.count - 1
+                while i >= 0{
+                    temp  += s[i]
+                    i -= 1
+                }
+            }else{
+                var i = s.count - 1
+                while i >= 0{
+                    temp  += s[i]
+                    i -= 1
+                }
+            }
+            return Int(temp)!
+        }
+    
 
+   
+    
+    func missingNumber(_ nums: [Int]) -> Int {
+        
+        
+        return 0
+    }
+    
+    func insertionSort(_ array: inout [Int]) {
+        guard array.count > 1 else {
+            return
+        }
+
+        for i in 1..<array.count {
+            let key = array[i]
+            print(key)
+            var j = i - 1
+
+            while j >= 0 && array[j] > key {
+                array[j + 1] = array[j]
+                j -= 1
+            }
+
+            array[j + 1] = key
+        }
+        print(array)
+    }
+    
+    func increasingTriplet(_ nums: [Int]) -> Bool {
+        var res = [Int]()
+        var i = 0
+        var j = 1
+        while i < j && j < nums.count {
+            if(nums[i] < nums[j]){
+                if(res.count == 0){
+                    res.append(nums[i])
+                }
+                
+                if(res.last! < nums[i]) {
+                    res.append(nums[i])
+                }else if(res.last! >= nums[i]){
+                    res.removeLast()
+                    res.append(nums[i])
+                }
+                i += 1
+                j += 1
+            }else if(nums[i] > nums[j]){
+                i += 1
+                j += 1
+            }
+            else {
+                print("ELSE")
+            }
+            print(res)
+        }
+        
+        return false
+    }
+    
+
+
+  
 }
 
 var sol = Solution()
