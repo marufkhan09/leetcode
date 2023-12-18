@@ -24,31 +24,31 @@
 import Foundation
 
 class Solution {
-        func decodeString(_ s: String) -> String {
-    
-            var i = 0
-            var j = 1
-            var res = ""
-            let chArr = Array(s)
-            //"3[a]2[bc]"
-            print(chArr)
-            while i < chArr.count {
-                var num = ""
-                var letter  = ""
-    
-                while j < chArr.count {
-                    if(chArr[i].isNumber){
-                        num += String(chArr[i])
-                    }
+    func decodeString(_ s: String) -> String {
+        
+        var i = 0
+        var j = 1
+        var res = ""
+        let chArr = Array(s)
+        //"3[a]2[bc]"
+        print(chArr)
+        while i < chArr.count {
+            var num = ""
+            var letter  = ""
+            
+            while j < chArr.count {
+                if(chArr[i].isNumber){
+                    num += String(chArr[i])
                 }
-    
-    
-    
-    
             }
-    
-            return ""
+            
+            
+            
+            
         }
+        
+        return ""
+    }
     
     //    func decodeMessage(_ key: String, _ message: String) -> String {
     //        var dict:[String:String] = [:]
@@ -85,7 +85,7 @@ class Solution {
     //    }
     //another
     
-
+    
     
     //    func pivotIndex(_ nums: [Int]) -> Int {
     //        var add = 0
@@ -332,18 +332,18 @@ class Solution {
     }
     
     
-//    func transpose(_ matrix: [[Int]]) -> [[Int]] {
-//        var temp:[[Int]] = []
-//        for i in 0..<matrix[0].count{
-//            var arr = [Int]()
-//            for j in 0..<matrix[i].count {
-//                print(matrix[j][i])
-//                arr.append(matrix[j][i])
-//            }
-//            temp.append(arr)
-//        }
-//        return temp
-//    }
+    //    func transpose(_ matrix: [[Int]]) -> [[Int]] {
+    //        var temp:[[Int]] = []
+    //        for i in 0..<matrix[0].count{
+    //            var arr = [Int]()
+    //            for j in 0..<matrix[i].count {
+    //                print(matrix[j][i])
+    //                arr.append(matrix[j][i])
+    //            }
+    //            temp.append(arr)
+    //        }
+    //        return temp
+    //    }
     
     func findMaxAverage(_ nums: [Int], _ k: Int) -> Double {
         var sum = 0
@@ -388,7 +388,7 @@ class Solution {
         return maxSum
     }
     
-  
+    
     
     func majorityElement(_ nums: [Int]) -> Int {
         
@@ -480,29 +480,29 @@ class Solution {
         return temp
     }
     
-        func maxOperations(_ x: Int) -> Int {
-            var temp = ""
-            var s = String(x).map({String($0)})
-            if(x <= 0){
-                s.removeFirst()
-                temp += "-"
-                var i = s.count - 1
-                while i >= 0{
-                    temp  += s[i]
-                    i -= 1
-                }
-            }else{
-                var i = s.count - 1
-                while i >= 0{
-                    temp  += s[i]
-                    i -= 1
-                }
+    func maxOperations(_ x: Int) -> Int {
+        var temp = ""
+        var s = String(x).map({String($0)})
+        if(x <= 0){
+            s.removeFirst()
+            temp += "-"
+            var i = s.count - 1
+            while i >= 0{
+                temp  += s[i]
+                i -= 1
             }
-            return Int(temp)!
+        }else{
+            var i = s.count - 1
+            while i >= 0{
+                temp  += s[i]
+                i -= 1
+            }
         }
+        return Int(temp)!
+    }
     
-
-   
+    
+    
     
     func missingNumber(_ nums: [Int]) -> Int {
         
@@ -514,17 +514,17 @@ class Solution {
         guard array.count > 1 else {
             return
         }
-
+        
         for i in 1..<array.count {
             let key = array[i]
             print(key)
             var j = i - 1
-
+            
             while j >= 0 && array[j] > key {
                 array[j + 1] = array[j]
                 j -= 1
             }
-
+            
             array[j + 1] = key
         }
         print(array)
@@ -562,8 +562,7 @@ class Solution {
     }
     
 
-
-  
+    
 }
 
 var sol = Solution()
